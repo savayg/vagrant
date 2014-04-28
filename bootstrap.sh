@@ -8,13 +8,13 @@ export LC_ALL=en_US.utf-8
 sudo chown -R vagrant /usr/local/rvm
 
 sudo apt-get install libpq-dev
+sudo apt-get install imagemagick
 
-set -o vi
+git config --global user.name "Sava Gerov"
+git config --global user.email sava.jg@gmail.com
+git config --global color.ui true
 
 sudo -u postgres psql -c "CREATE USER vagrant WITH PASSWORD 'password' CREATEDB;"
 
 npm install -g bower
 
-git config --global user.name "Sava Gerov"
-git config --global user.email sava.jg@gmail.com
-git config --global color.ui true

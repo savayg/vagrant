@@ -29,6 +29,8 @@ Vagrant::configure(VAGRANTFILE_API_VERSION) do |config|
     chef.add_recipe "git"
     chef.add_recipe "postgresql"
     chef.add_recipe "vim"
+    chef.add_recipe "tmux"
+    chef.add_recipe "imagemagick"
 
     chef.json.merge!({
       :rvm => {

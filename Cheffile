@@ -7,6 +7,9 @@ cookbook 'apt'
 cookbook 'build-essential', '~> 1.4.4'
 cookbook 'yum'
 cookbook 'vim'
+cookbook 'tmux'
+cookbook 'imagemagick',
+  :git => 'https://github.com/someara/imagemagick.git'
 
 cookbook 'rvm', 
   :git => 'git://github.com/fnichol/chef-rvm.git'
