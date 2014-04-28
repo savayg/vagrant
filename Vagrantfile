@@ -32,13 +32,18 @@ Vagrant::configure(VAGRANTFILE_API_VERSION) do |config|
 
     chef.json.merge!({
       :rvm => {
-        :default_ruby => 'ruby-2.0.0'
+        :default_ruby => 'ruby-2.1.1'
       },
       :nodejs => {
-        "version" => "0.5.0"
-      } 
+        "version" => "0.10.26"
+      },
+      :postgresql => {
+        password: {
+          postgres: "password"
+        }
+      }
     })
   end
 
-  config.vm.provision "shell", inline: "sudo chown -R vagrant /usr/local/rvm"
+  config.vm.provision :shell, :path => "bootstrap.sh"
 end

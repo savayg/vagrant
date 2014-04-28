@@ -4,6 +4,7 @@ SITE
     apt (2.3.10)
     build-essential (1.4.4)
     chef_gem (0.1.0)
+    openssl (1.1.0)
     runit (1.5.10)
       build-essential (>= 0.0.0)
       yum (~> 3.0)
@@ -22,19 +23,22 @@ GIT
       chef_gem (>= 0.0.0)
 
 GIT
-  remote: https://github.com/findsyou/cookbooks
-  ref: postgresql-improvements
-  sha: ae23e8bb35e7fddf0709bd986742b38618b4db1e
-  specs:
-    postgresql (0.11.1)
-
-GIT
   remote: https://github.com/fnichol/chef-git.git
   ref: master
   sha: 6c19cbefcdad5ec0f62a64dae1f656d660698ea3
   specs:
     git (0.9.0)
       runit (>= 0.0.0)
+
+GIT
+  remote: https://github.com/hw-cookbooks/postgresql.git
+  ref: master
+  sha: 5800238828b443725442fe510ec4f5308ed9ce8b
+  specs:
+    postgresql (3.3.4)
+      apt (>= 0.0.0)
+      build-essential (>= 0.0.0)
+      openssl (>= 0.0.0)
 
 GIT
   remote: https://github.com/mdxp/nodejs-cookbook.git
