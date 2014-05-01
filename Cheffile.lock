@@ -9,6 +9,7 @@ SITE
       build-essential (>= 0.0.0)
       yum (~> 3.0)
       yum-epel (>= 0.0.0)
+    tmux (1.4.0)
     vim (1.1.2)
     yum (3.2.0)
     yum-epel (0.3.6)
@@ -50,13 +51,22 @@ GIT
       build-essential (>= 0.0.0)
       yum-epel (>= 0.0.0)
 
+GIT
+  remote: https://github.com/someara/imagemagick.git
+  ref: master
+  sha: 891a842ad71a8dadc5ec6ed4fa564493e71e2bce
+  specs:
+    imagemagick (0.2.2)
+
 DEPENDENCIES
   apt (>= 0)
   build-essential (~> 1.4.4)
   git (>= 0)
+  imagemagick (>= 0)
   nodejs (>= 0)
   postgresql (>= 0)
   rvm (>= 0)
+  tmux (>= 0)
   vim (>= 0)
   yum (>= 0)
 
